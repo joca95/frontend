@@ -1,0 +1,32 @@
+<br/>
+<h1>Crear Nuevo Usuario</h1>
+<form class="form-vertical col-3">
+<div *ngIf="!isValid" class="alert alert-danger">
+    <strong>Danger!</strong> {{mensaje}}
+  </div>
+  <div class="form-group">
+    <label for="primerNombre">Primer Nombre: </label>
+    <input type="text" class="form-control" id="primerNombre" name="primerNombre" [(ngModel)]="user.primerNombre" placeholder="Primer Nombre" required>
+  </div>
+  <div class="form-group">
+    <label for="segundoNombre">Segundo Nombre: </label>
+    <input type="text" class="form-control" id="segundoNombre" name="segundoNombre" [(ngModel)]="user.segundoNombre" placeholder="Segundo Nombre">
+  </div>
+  <div class="form-group">
+    <label for="apellidoPaterno">Apellido Paterno: </label>
+    <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" [(ngModel)]="user.apellidoPaterno" placeholder="Apellido Paterno" required>
+  </div>
+  <div class="form-group">
+    <label for="apellidoMaterno">Apellido Materno: </label>
+    <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" [(ngModel)]="user.apellidoMaterno" placeholder="Apellido Materno" required>
+  </div>
+  <div class="form-group">
+    <label for="telefono">Teléfono: </label>
+    <input type="tel" class="form-control" id="telefono" name="telefono" [(ngModel)]="user.telefono" placeholder="999999999">
+  </div>
+  <div class="form-group">
+    <label for="direccion">Dirección: </label>
+    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="user.direccion" placeholder="Av. Mi Avenida #555">
+  </div>
+  <button type="submit" (click)="guardarOEditar()" class="btn btn-primary">Submit</button>
+</form>
